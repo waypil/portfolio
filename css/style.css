@@ -1,0 +1,202 @@
+@charset "utf-8";
+/*
+@font-face {
+    font-family: 'SEBANG_Gothic_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+@font-face {
+    font-family: 'SEBANG_Gothic_Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: SEBANG_Gothic_Regular;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;  /* https://dasima.xyz/css-box-sizing-content-box-vs-border-box/ */
+    background-color: black;
+}
+ul, ol {
+    list-style: none;
+}
+p {
+    color: white;
+}
+a {
+    color: white;
+    text-decoration: none;  /* 하이퍼링크 밑줄이 없어짐 */
+}
+
+
+/* Header */
+
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    height: 100px;
+    margin: auto;
+    position: relative;
+}
+header .inner h1 {  /* Shoot & Dodge */
+    /* position: absolute; */
+    bottom: 30%;
+}
+header .inner #gnb {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    right: 0px;
+    height: inherit;
+}
+header .inner #gnb li {
+    display: flex;
+    height: 100%;
+}
+header .inner #gnb li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    width: 250px;
+    height: 100%;
+    /* padding: 0px 40px; */
+}
+header .inner #gnb li a i {
+    font-size: 60px;
+    background: none;
+    padding-right: 15px;
+}
+header .inner #gnb li a p {
+    background: none;
+}
+header .inner #gnb li #navBtn {
+    width: 150px;
+    border-bottom: #555 solid 3px;
+}
+header .inner #gnb li #youtubeNavBtn {
+    background: red;
+}
+header .inner #gnb li #downloadNavBtn {
+    background: #5f5;
+}
+header .inner #gnb li #downloadNavBtn {
+    color: black;
+}
+header .inner #gnb li a:hover {
+    background: #555;
+}
+header .inner #gnb li #youtubeNavBtn:hover {
+    background: #f55;
+}
+header .inner #gnb li #downloadNavBtn:hover {
+    background: #bfb;
+}
+
+
+/* Video */
+
+figure {
+    background-color: #111;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+figure iframe { /* 가운데 정렬 */
+    display: block;
+    margin: auto;
+}
+/*
+figure video {
+    display: block;  // 영상을 뷰포트 가운데로
+    margin: auto;
+    object-fit: cover;
+    width: 80%;
+    height: auto;
+}
+*/
+
+
+/* Main */
+
+main {
+    background-color: #111;
+}
+
+
+/* Footer */
+
+footer #body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: auto;  /* 가운데 정렬 */
+    width: 90vw;
+    padding: 30px 30px;
+
+}
+footer #body #left {
+    width: 100%;
+}
+footer #body #left #upper {
+    display: flex;
+    justify-content: space-between;
+}
+footer #body #left #upper #column ul {
+    display: flex;
+}
+footer #body #left #upper #column ul li {
+    padding: 0px 20px;
+    border-right: #555 solid 2px;
+}
+footer #body #left #upper #column ul li:nth-last-child(1) {
+    border-right: none;
+}
+footer #body #left #upper #icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 25px;
+}
+footer #body #left #upper #icons a {
+    /*
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    height: 100%;
+    */
+    padding-right: 25px;
+}
+footer #body #left #upper #icons a i {
+    line-height: 1.2;
+    font-size: 36px;
+}
+
+
+footer #body #left #lower #license {
+    padding: 20px;
+    line-height: 1.6;
+}
+
+
+
+
+footer #body #right {
+    box-sizing: content-box;
+    border-left: #555 solid 2px;
+    padding-left: 30px;
+    width: 5vw;
+}
+footer #body #right img {
+    width: 100%;
+}

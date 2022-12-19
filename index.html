@@ -1,12 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>  
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>오현석 사용설명서</title>
+
+    <!-- CSS, JS 불러오기 -->
+    <link rel="stylesheet" href="css/style.css"></link>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/noie.js"></script>
+    <!--
+        defer & async: 브라우저가 HTML 분석(파싱)과 동시에 .js를 다운로드하도록 명령.
+
+        [     ] HTML 파싱 끝나고 다음 순서로 .js 다운로드, 그 뒤에 .js 실행
+        [defer] .js 다운로드, HTML 파싱 둘 다 끝나고 .js 실행
+        [async] .js 다운로드가 끝나면 HTML 파싱을 일시중단하고 .js 실행
+
+        <출처>
+        https://www.daleseo.com/js-script-defer-async/
+        https://wormwlrm.github.io/2021/03/01/Async-Defer-Attributes-of-Script-Tag.html
+    -->
+
+    <!-- 폰트어썸 적용 -->
+    <script src="https://kit.fontawesome.com/6655fda58f.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <title>Shoot & Dodge | Free-Game ©WAYPIL</title>
 </head>
+
 <body>
-    
+    <header>
+        <div class="inner">
+            <h1> <a href="#">Shoot & Dodge</a> </h1>
+
+            <nav id="gnb">  <!-- global navi. bar : 전역 이동 메뉴바 -->
+                <li> <a href="#" id="navBtn">WAYPIL</a> </li>
+                <li> <a href="#" id="navBtn">MANUAL</a> </li>
+                <li> <a href="#" id="navBtn">NEWS</a> </li>
+                <li>
+                    <a href="https://www.youtube.com/@waypil" target="_blank" id="youtubeNavBtn">
+                        <i class="fa-brands fa-youtube"></i>
+                        <p>YOUTUBE</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://play.google.com/store/apps/details?id=com.Waypil.ShootDodge" target="_blank" id="downloadNavBtn">
+                        <i class="fa-brands fa-google-play"></i>
+                        <p>DOWNLOAD</p>
+                    </a>
+                </li>
+            </nav>
+        </div>
+    </header>
+
+    <figure>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1WrYWQSHwBk?autoplay=1&mute=1&controls=0&loop=1&playlist=1WrYWQSHwBk" title="Shoot & Dodge (Game Trailer)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!--
+        <a href="https://youtu.be/1WrYWQSHwBk">
+            <video src="resources/video/PV.mp4" autoplay muted loop></video>
+        </a>
+        -->
+    </figure>
+
+    <main>
+        
+    </main>
+
+    <section>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+    </section>
+
+    <aside>
+
+    </aside>
+
+    <footer>
+        <div id="body">
+            <div id="left">
+                <div id="upper">
+                    <nav id="column">
+                        <ul>
+                            <li> <a href="#">이용약관</a> </li>  <!-- Policy & Terms -->
+                            <li> <a href="#">개인정보처리방침</a> </li>
+                            <li> <a href="#">저작권정책</a> </li>
+                            <li> <a href="#">이메일무단수집거부</a> </li>
+                            <li> <a href="#">문의</a> </li>  <!-- Contect -->
+                            <li> <a href="#">사이트맵</a> </li>
+                        </ul>
+                    </nav>
+                        
+                    <nav id="icons">
+                        <a href="https://play.google.com/store/apps/details?id=com.Waypil.ShootDodge" target="_blank">
+                            <i class="fa-brands fa-google-play"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/@waypil" target="_blank">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="https://github.com/waypil" target="_blank">
+                            <i class="fa-brands fab fa-github"></i>
+                        </a>
+                    </nav>
+                </div>
+                
+                <div id="lower">
+                    <div id="license">
+                        <h1> <a href="#">Shoot & Dodge</a> </h1>
+                        <address></address>
+                        <p>Copyright 2022-2023. WAYPIL All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="right">
+
+                <img src="resources/image/204px-GRAC_All.png" alt="게임등급_전체이용가">
+            <div>
+        </div>
+        
+    </footer>
 </body>
+
 </html>
