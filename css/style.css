@@ -88,7 +88,8 @@ header .inner #gnb li #youtubeNavBtn {
 header .inner #gnb li #downloadNavBtn {
     background: #5f5;
 }
-header .inner #gnb li #downloadNavBtn {
+header .inner #gnb li #downloadNavBtn i,
+header .inner #gnb li #downloadNavBtn p {
     color: black;
 }
 header .inner #gnb li a:hover {
