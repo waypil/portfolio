@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 /*
 @font-face {
     font-family: 'SEBANG_Gothic_Bold';
@@ -7,13 +8,13 @@
     font-style: normal;
 }
 */
-
 @font-face {
     font-family: 'SEBANG_Gothic_Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
 
 * {
     font-family: SEBANG_Gothic_Regular;
@@ -40,14 +41,19 @@ header .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90vw;
     height: 100px;
     margin: auto;
     position: relative;
 }
-header .inner h1 {  /* Shoot & Dodge */
-    /* position: absolute; */
-    bottom: 30%;
+header .inner #titleBox {
+    width: 25vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .inner #titleBox h1 {  /* Shoot & Dodge */
+
 }
 header .inner #gnb {
     display: flex;
@@ -68,7 +74,6 @@ header .inner #gnb li a {
     font-weight: bold;
     width: 250px;
     height: 100%;
-    /* padding: 0px 40px; */
 }
 header .inner #gnb li a i {
     font-size: 60px;
@@ -101,7 +106,83 @@ header .inner #gnb li #youtubeNavBtn:hover {
 header .inner #gnb li #downloadNavBtn:hover {
     background: #bfb;
 }
+header .inner #menuBtn {
+    display: none;
+}
 
+@media (max-width: 1250px) {
+    header .inner #titleBox {
+        width: 30vw;
+    }
+    header .inner #gnb li a p {
+        display: none
+    }
+    header .inner #gnb li #youtubeNavBtn,
+    header .inner #gnb li #downloadNavBtn {
+        width: 12vw;
+        display: flex;
+        justify-content: center;
+    }
+    header .inner #gnb li #downloadNavBtn i {
+        padding-left: 7.5px;
+    }
+    header .inner #gnb li a i {
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 1000px) {
+    header .inner #titleBox {
+        width: 40vw;
+    }
+    header .inner #gnb li #navBtn {
+        width: 12vw;
+    }
+    header .inner #gnb li #youtubeNavBtn,
+    header .inner #gnb li #downloadNavBtn {
+        width: 100px;
+    }
+    header .inner #gnb li #youtubeNavBtn i,
+    header .inner #gnb li #downloadNavBtn i {
+        /* font-size: 6vw; */
+    }
+    #lastDummy {
+        display: none;
+    }
+}
+
+@media (max-width: 750px) {
+    header .inner #titleBox {
+        width: 60vw;
+    }
+    header .inner #gnb li #navBtn,
+    header .inner #gnb li #youtubeNavBtn {
+        display: none;
+    }
+    
+    header .inner #gnb {
+        order: 1;
+    }
+    header .inner #titleBox {
+        order: 2;
+    }
+    header .inner #menuBtn {
+        order: 3;
+        width: 100px;
+        height: 100%;
+        font-size: 60px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header .inner #menuBtn i {
+        background: none;
+    }
+    header .inner #menuBtn:hover {
+        background: #333;
+    }
+}
 
 /* Video */
 
@@ -115,6 +196,13 @@ figure iframe { /* 가운데 정렬 */
     display: block;
     margin: auto;
 }
+
+@media (max-width: 1130px) {
+    figure {
+        height: 55vw;
+    }
+}
+
 /*
 figure video {
     display: block;  // 영상을 뷰포트 가운데로
@@ -153,9 +241,15 @@ footer #body #left #upper {
 }
 footer #body #left #upper #column ul {
     display: flex;
+    flex-wrap: wrap;
 }
 footer #body #left #upper #column ul li {
-    padding: 0px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+footer #body #left #upper #column ul li a {
+    padding-right: 20px;
     border-right: #555 solid 2px;
 }
 footer #body #left #upper #column ul li:nth-last-child(1) {
@@ -165,7 +259,7 @@ footer #body #left #upper #icons {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 25px;
+    padding: 0 25px;
 }
 footer #body #left #upper #icons a {
     /*
@@ -190,14 +284,22 @@ footer #body #left #lower #license {
 }
 
 
-
-
 footer #body #right {
     box-sizing: content-box;
     border-left: #555 solid 2px;
     padding-left: 30px;
-    width: 5vw;
+    width: 100px;
 }
 footer #body #right img {
     width: 100%;
+}
+
+
+@media (max-width: 855px) {
+    footer #body #left #upper #icons {
+        display: none;
+    }
+    footer #body #right {
+        border-left: none;
+    }
 }
