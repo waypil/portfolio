@@ -46,7 +46,8 @@ header .inner {
     position: relative;
 }
 header .inner #titleBox {
-    width: 25vw;
+    /* width: 25vw; */
+    padding-left: 75px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -109,11 +110,11 @@ header .inner #gnb li #downloadNavBtn:hover {
 header .inner #menuBtn {
     display: none;
 }
+#lastDummy {
+    display: none;
+}
 
-@media (max-width: 1250px) {
-    header .inner #titleBox {
-        width: 30vw;
-    }
+@media (max-width: 1350px) {
     header .inner #gnb li a p {
         display: none
     }
@@ -131,10 +132,7 @@ header .inner #menuBtn {
     }
 }
 
-@media (max-width: 1000px) {
-    header .inner #titleBox {
-        width: 40vw;
-    }
+@media (max-width: 1150px) {
     header .inner #gnb li #navBtn {
         width: 12vw;
     }
@@ -151,7 +149,21 @@ header .inner #menuBtn {
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 950px) {  /* 준 모바일 기기 */
+    header .inner {
+        height: 75px;
+    }   
+    header .inner #titleBox {
+        padding-left: 0px;
+        width: 40vw;
+    }
+    header .inner #gnb li #youtubeNavBtn i,
+    header .inner #gnb li #downloadNavBtn i {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 750px) {  /* 모바일 기기 */
     header .inner #titleBox {
         width: 60vw;
     }
@@ -159,7 +171,6 @@ header .inner #menuBtn {
     header .inner #gnb li #youtubeNavBtn {
         display: none;
     }
-    
     header .inner #gnb {
         order: 1;
     }
@@ -170,7 +181,7 @@ header .inner #menuBtn {
         order: 3;
         width: 100px;
         height: 100%;
-        font-size: 60px;
+        font-size: 40px;
         color: white;
         display: flex;
         justify-content: center;
@@ -183,6 +194,7 @@ header .inner #menuBtn {
         background: #333;
     }
 }
+
 
 /* Video */
 
@@ -197,11 +209,13 @@ figure iframe { /* 가운데 정렬 */
     margin: auto;
 }
 
+/*
 @media (max-width: 1130px) {
     figure {
         height: 55vw;
     }
 }
+*/
 
 /*
 figure video {
