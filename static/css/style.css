@@ -210,27 +210,16 @@ figure {
     justify-content: center;
     align-items: center;
 }
-figure video,
 figure iframe {
     /* 가운데 정렬 */
     display: block;
     margin: auto;
     /* 화면비 */
     width: 100%;
+    height: 55vw;
     max-height: 80vh;
 }
 
-figure iframe {
-    height: 50vw;
-}
-
-/*
-@media (min-width: 50vw) {
-    figure {
-        height: 100%;
-    }
-}
-*/
 /*
 figure i {
     position: absolute;

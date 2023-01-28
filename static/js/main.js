@@ -17,15 +17,15 @@ function mobilePC() {
 	const isMobile = /Mobi/i.test(window.navigator.userAgent);
 
 	if (isMobile) {
-		$("figure a").css("display", "none");  // .mp4 off
+		
 	}
 	else {  // PC or Tablet etc.
-		$("figure iframe").css("display", "none");  // youtube off
+		
 	}
 }
 
 noIE();
-mobilePC();
+// mobilePC();
 
 
 /*
