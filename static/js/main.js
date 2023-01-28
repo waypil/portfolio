@@ -1,37 +1,41 @@
+function noIE() {
+	/* NO Internet Explorer */
+
+	const ver = navigator.userAgent;
+	console.log(ver);
+
+	const isIE = /trident/i.test(ver);
+	console.log(isIE);
+
+	if (isIE) {
+		alert("이 웹 페이지는 익스플로러를 지원하지 않습니다. 다른 브라우저로 접속해주십시오.")
+	}
+}
+
+function mobilePC() {
+	// const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+	const isMobile = /Mobi/i.test(window.navigator.userAgent);
+
+	if (isMobile) {
+		$("figure a").css("display", "none");  // .mp4 off
+	}
+	else {  // PC or Tablet etc.
+		$("figure iframe").css("display", "none");  // youtube off
+	}
+}
+
+noIE();
+mobilePC();
+
+
 /*
-const boxEl = document.querySelector('.box');
-
-boxEl.textContent = "마";
-
-console.log(boxEl.innerHTML)  // 가나<span style="display:none">다라</span>
-console.log(boxEl.innerText)  // 가나
-console.log(boxEl.textContent)  // 가나다라
-*/
-
-/*
-<div class="box">가나<span style='display:none'>다라</span></div>
-
-const boxEl = document.querySelector('.box');
-
-console.log(boxEl.innerHTML)  // 가나<span style="display:none">다라</span>
-console.log(boxEl.innerText)  // 가나
-console.log(boxEl.textContent)  // 가나다라
-
-boxEl.innerHTML = "마"; || boxEl.innerText = "마"; || boxEl.textContent = "마";
-
-console.log(boxEl.innerHTML)  // 마
-console.log(boxEl.innerText)  // 마
-console.log(boxEl.textContent)  // 마
-*/
-
-
-/*
-const boxElements = document.querySelectorAll(".box");
-
-console.log(boxElements.values);
-
-boxElements.forEach(function (boxElement, index) {
-    // console.log(`${boxElement.innerHTML} ${index}`);
-    console.log(boxElement.innerHTML, index);
-})
+function gotoScroll(e, r) {
+    var zoom = document.body.clientWidth / 1920;
+    // console.log(e)
+    // console.log(document.getElementById(e).offsetTop)
+    $("html, body").animate({
+        scrollTop: document.getElementById(e).offsetTop * zoom
+    }, 1000)
+    console.log(r)
+}
 */

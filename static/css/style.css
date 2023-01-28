@@ -33,6 +33,9 @@ a {
     color: white;
     text-decoration: none;  /* 하이퍼링크 밑줄이 없어짐 */
 }
+i {
+    background: none;
+}
 
 
 /* Header */
@@ -78,7 +81,6 @@ header .inner #gnb li a {
 }
 header .inner #gnb li a i {
     font-size: 60px;
-    background: none;
     padding-right: 15px;
 }
 header .inner #gnb li a p {
@@ -199,16 +201,47 @@ header .inner #menuBtn {
 /* Video */
 
 figure {
-    background-color: #111;
-    width: 100%;
-    height: 80vh;
     position: relative;
+    background-color: #222;
+    width: 100%;
+    height: 100%;
+    max-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-figure iframe { /* 가운데 정렬 */
+figure video,
+figure iframe {
+    /* 가운데 정렬 */
     display: block;
     margin: auto;
+    /* 화면비 */
+    width: 100%;
+    max-height: 80vh;
 }
 
+figure iframe {
+    height: 50vw;
+}
+
+/*
+@media (min-width: 50vw) {
+    figure {
+        height: 100%;
+    }
+}
+*/
+/*
+figure i {
+    position: absolute;
+    color: lightgray;
+    opacity: 0.5;
+    font-size: 100px;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+*/
 /*
 @media (max-width: 1130px) {
     figure {

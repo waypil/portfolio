@@ -9,7 +9,6 @@
     <!-- CSS, JS 불러오기 -->
     <link rel="stylesheet" href="../static/css/style.css"></link>
     <script defer src="../static/js/main.js"></script>
-    <script defer src="../static/js/noie.js"></script>
     <!--
         defer & async: 브라우저가 HTML 분석(파싱)과 동시에 .js를 다운로드하도록 명령.
 
@@ -22,9 +21,13 @@
         https://wormwlrm.github.io/2021/03/01/Async-Defer-Attributes-of-Script-Tag.html
     -->
 
+    <!-- jQuery 적용 -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
     <!-- 폰트어썸 적용 -->
     <script src="https://kit.fontawesome.com/6655fda58f.js" crossorigin="anonymous"></script>
 
+    <!-- 크롤링 설정 적용 -->
     <meta property="og:image" content="https://raw.githubusercontent.com/waypil/portfolio/main/resources/image/banner.png" />
     <meta property="og:title" content="Shoot & Dodge [Free Download!]">
     <meta property="og:description" content="Simple Retro Arcade Shooting Game">
@@ -67,11 +70,16 @@
     </header>
 
     <figure>
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1WrYWQSHwBk?autoplay=1&mute=1&controls=0&loop=1&playlist=1WrYWQSHwBk" title="Shoot & Dodge (Game Trailer)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <!--
-        <a href="https://youtu.be/1WrYWQSHwBk">
-            <video src="resources/video/PV.mp4" autoplay muted loop></video>
+        <!-- PC 환경에서만 표시 -->
+        <a href="https://youtu.be/1WrYWQSHwBk" target="_blank">
+            <video src="../static/resources/video/Shoot And Dodge PV.mp4" autoplay muted loop></video>
         </a>
+
+        <!-- 모바일 환경에서만 표시 -->
+        <iframe src="https://www.youtube.com/embed/1WrYWQSHwBk?autoplay=1&mute=1&controls=0&loop=1&playlist=1WrYWQSHwBk" title="Shoot & Dodge (Game Trailer)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <!--
+            <i class="fas fa-chevron-circle-down" onclick="gotoScroll('footer')"></i>
         -->
     </figure>
 
