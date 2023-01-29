@@ -29,6 +29,36 @@ noIE();
 
 
 /*
+function radioCharInfoLanguage(langCode) {
+	const charNames = $('#charName').children();
+
+	for (let i = 0; i < charNames.length; i++) {
+		let charName = charNames[i];
+
+		if (charName.classList.contains(langCode)) {
+			charName.classList.add('active');
+		}
+		else {
+			charName.classList.remove('active');
+		}
+	}
+
+	const charDescrs = $('#charDescr').children();
+
+	for (let i = 0; i < charDescrs.length; i++) {
+		let charDescr = charDescrs[i];
+		
+		if (charDescr.classList.contains(langCode)) {
+			charDescr.classList.add('visible');
+		}
+		else {
+			charDescr.classList.remove('visible');
+		}
+	}
+}
+*/
+  
+/*
 function gotoScroll(e, r) {
     var zoom = document.body.clientWidth / 1920;
     // console.log(e)
