@@ -28,6 +28,98 @@ noIE();
 // mobilePC();
 
 
+
+function toggleLanguageList() {
+	$('#languageList')[0].classList.toggle('visible');
+}
+
+function selectLanguage(langCode) {
+	if ($('html').attr('lang') !== langCode) {
+		$.ajax({
+			type: "GET",
+			url: `/language?lang=${langCode}`,
+			data: {},
+			success: function (response) {
+				let rows = response['all_rows'];
+	
+				for (let i = 0; i < rows.length; i++) {
+					let tid = rows[i]['tid'];
+					let text = rows[i][langCode];
+	
+					let htmlText = taggingSentences('p', text);
+					overwriteNewLanguage(tid, htmlText);
+				}
+	
+				toggleCurrentLanguage(langCode);
+			}
+		})
+	}
+	$('aside div#languageUI ul#languageList')[0].classList.remove('visible');
+}
+
+function taggingSentences(tag, text) {
+	let openTag = `<${tag}>`;
+	let closeTag = `</${tag}>`;
+	let period = (text.includes('。') ? '。' : '. ');  // 마침표
+
+	let newText = openTag;
+
+	sentences = text.split(period);
+
+	if (sentences[sentences.length - 1] === "") {
+		sentences.pop();
+	}
+
+	if (sentences.length == 1) {
+		return sentences[0];
+	}
+
+	for (let i = 0; i < sentences.length; i++) {
+		if (i === sentences.length - 1) {  // 마지막 문장일 경우
+			if (period === '。') {
+				newText += `${sentences[i]}${period}${closeTag}`
+			}
+			else {
+				newText += `${sentences[i]}${closeTag}`
+			}
+		}
+		else {
+			newText += `${sentences[i]}${period}${closeTag}${openTag}`
+		}
+	}
+
+	return newText;
+}
+
+function overwriteNewLanguage(tid, text) {
+	let codes = tid.split('_');
+	let infoType = codes[0];
+	let charName = codes[1];
+
+	if (infoType == 'charName') {
+		$(`#${charName}Info h1`)[0].innerText = text;
+	}
+	else if (infoType == 'charDescr') {
+		$(`#${charName}Info .charDescr`).html(text);
+	}
+}
+
+function toggleCurrentLanguage(langCode) {
+	$('html').attr('lang', langCode);
+	const langButtons = $('aside div#languageUI ul#languageList').children();
+
+	for (let i = 0; i < langButtons.length; i++) {
+		let langBtn = langButtons[i];
+
+		if (langBtn.classList.contains(langCode)) {
+			langBtn.classList.add('currentLanguage');
+		}
+		else {
+			langBtn.classList.remove('currentLanguage');
+		}
+	}
+}
+
 /*
 function radioCharInfoLanguage(langCode) {
 	const charNames = $('#charName').children();

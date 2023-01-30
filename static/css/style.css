@@ -26,6 +26,7 @@
 }
 ul, ol {
     list-style: none;
+    background-color: transparent;
 }
 a {
     text-decoration: none;  /* 하이퍼링크 밑줄이 없어짐 */
@@ -37,6 +38,7 @@ i, h1, h2, h3, h4, h5, h6, p, span, img, a, div {
 main, section, article {
     background-color: #222;
 }
+
 
 
 
@@ -226,6 +228,9 @@ main h1 {
 
 /* Section & Article : CharactersInfo */
 
+section {
+    padding: 1vh 0;
+}
 section#charactersInfo {
     display: flex;
     justify-content: center;
@@ -275,6 +280,9 @@ section#charactersInfo article div.charDescr p {
 }
 
 @media (max-width: 860px) {
+    section#charactersInfo article {
+        width: 42vw;
+    }
     section#charactersInfo article div.charFlexBox {
         flex-direction: column;
     }
@@ -283,17 +291,20 @@ section#charactersInfo article div.charDescr p {
     }
 }
 @media (max-width: 570px) {
+    section#charactersInfo article {
+        width: 90vw;
+    }
     section#charactersInfo article div.charFlexBox {
         flex-direction: row;
     }
     section#charactersInfo {
         flex-direction: column;
     }
-    section#charactersInfo article {
-        width: 80vw;
-    }
 }
 @media (max-width: 450px) {
+    section#charactersInfo article {
+        width: 90vw;
+    }
     section#charactersInfo article div.charFlexBox {
         flex-direction: column;
     }
@@ -302,6 +313,63 @@ section#charactersInfo article div.charDescr p {
     }
 }
 
+
+
+/* Aside */
+
+aside div#languageUI * {
+    cursor: pointer;
+}
+aside div#languageUI ul#languageList {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 120px;
+}
+aside div#languageUI ul#languageList.visible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+aside div#languageUI ul#languageList li {
+    width: 125px;
+    height: 50px;
+    background-color: black;
+    border: white solid 3px;
+    border-radius: 30%;
+    margin-bottom: 20px;
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+aside div#languageUI ul#languageList li.currentLanguage,
+aside div#languageUI ul#languageList li:hover {
+    background-color: white;
+    color: black;
+}
+aside div#languageUI span#languageBtn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 100px;
+    height: 100px;
+    opacity: 0.5;
+    background-color: black;
+    border-radius: 50%;
+    box-shadow: 0 0 0.5vw 0.5vw gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+aside div#languageUI span#languageBtn:hover {
+    opacity: 1;
+}
+aside div#languageUI span#languageBtn i {
+    font-size: 60px;
+}
 
 
 
@@ -314,7 +382,6 @@ footer #body {
     margin: auto;  /* 가운데 정렬 */
     width: 90vw;
     padding: 30px 30px;
-
 }
 footer #body #left {
     width: 100%;

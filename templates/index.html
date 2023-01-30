@@ -84,15 +84,8 @@
         -->
     </main>
 
-    <section>
-        <article></article>
-        <article></article>
-        <article></article>
-        <article></article>
-    </section>
-
     <section id="charactersInfo">
-        <article>
+        <article id="playerInfo">
             <h1>플레이어</h1>
             <div class="charFlexBox">
                 <img src="../static/resources/image/bulletian-player.png" alt="bulletian-player">
@@ -102,7 +95,7 @@
                 </div>
             </div>
         </article>
-        <article>
+        <article id="horizorkInfo">
             <h1>호리저크</h1>
             <div class="charFlexBox">
                 <img src="../static/resources/image/bulletian-horizork.png" alt="bulletian-horizork">
@@ -112,7 +105,7 @@
                 </div>
             </div>
         </article>
-        <article>
+        <article id="vertizorkInfo"> 
             <h1>버티저크</h1>
             <div class="charFlexBox">
                 <img src="../static/resources/image/bulletian-vertizork.png" alt="bulletian-vertizork">
@@ -122,7 +115,7 @@
                 </div>
             </div>
         </article>
-        <article>
+        <article id="mystizorkInfo">
             <h1>미스티저크</h1>
             <div class="charFlexBox">
                 <img src="../static/resources/image/bulletian-mystizork.png" alt="bulletian-mystizork">
@@ -135,7 +128,16 @@
     </section>
 
     <aside>
-
+        <div id="languageUI">
+            <ul class="" id="languageList">
+                <li class="ko currentLanguage" onclick="selectLanguage('ko')">한국어</li>
+                <li class="en" onclick="selectLanguage('en')">English</li>
+                <li class="ja" onclick="selectLanguage('ja')">日本語</li>
+            </ul>
+            <span class="circle" id="languageBtn" onclick="toggleLanguageList()">
+                <i class="fa-solid fa-globe"></i>
+            </span>
+        </div>
     </aside>
 
     <footer>
@@ -182,7 +184,6 @@
                 </a>
             <div>
         </div>
-        
     </footer>
 </body>
 
