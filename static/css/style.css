@@ -114,9 +114,6 @@ header .inner #gnb li #downloadNavBtn:hover {
 header .inner #menuBtn {
     display: none;
 }
-#lastDummy {
-    display: none;
-}
 
 @media (max-width: 1350px) {
     header .inner #gnb li a p {
@@ -147,9 +144,6 @@ header .inner #menuBtn {
     header .inner #gnb li #youtubeNavBtn i,
     header .inner #gnb li #downloadNavBtn i {
         /* font-size: 6vw; */
-    }
-    #lastDummy {
-        display: none;
     }
 }
 
@@ -190,6 +184,7 @@ header .inner #menuBtn {
         align-items: center;
     }
     header .inner #menuBtn i {
+        font-size: 40px;
         background: none;
     }
     header .inner #menuBtn:hover {
