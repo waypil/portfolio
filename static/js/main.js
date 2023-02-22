@@ -17,10 +17,10 @@ function mobilePC() {
 	const isMobile = /Mobi/i.test(window.navigator.userAgent);
 
 	if (isMobile) {
-		
+
 	}
 	else {  // PC or Tablet etc.
-		
+
 	}
 }
 
@@ -41,15 +41,15 @@ function selectLanguage(langCode) {
 			data: {},
 			success: function (response) {
 				let rows = response['all_rows'];
-	
+
 				for (let i = 0; i < rows.length; i++) {
 					let tid = rows[i]['tid'];
 					let text = rows[i][langCode];
-	
+
 					let htmlText = taggingSentences('p', text);
 					overwriteNewLanguage(tid, htmlText);
 				}
-	
+
 				toggleCurrentLanguage(langCode);
 			}
 		})
@@ -149,15 +149,63 @@ function radioCharInfoLanguage(langCode) {
 	}
 }
 */
-  
+
+
+/*
+const cursor = $('.cursor')[0];
+		  
+$('#gameScreen').mousedown((event) => {
+	cursor.style.left = event.pageX + 'px';
+	cursor.style.top = event.pageY + 'px';
+
+	$(this).mousemove((event) => {
+		cursor.style.left = event.pageX + 'px';
+		cursor.style.top = event.pageY + 'px';
+	});
+
+	let screenRect = event.target.getBoundingClientRect();
+	
+	// console.log(screenRect.top, cursor.style.top, screenRect.left, cursor.style.left)
+	// console.log(screenRect.top, event.clientY, screenRect.left, event.clientX)
+	console.log(screenRect.left, screenRect.top, screenRect.right, screenRect.bottom)
+	console.log(event.clientX, event.clientY)
+	console.log("")
+
+}).mouseup(() => {
+	$(this).unbind('mousemove');
+});
+*/
+
+
+/*
+const circle = document.querySelector(".circle");
+
+document.addEventListener("mousemove", (e) => { // mousemove이벤트를 이용해 움
+
+	// 마우스의 좌표는 clientX와 clientY를 이용해 알수 있다. -> 브라우저 window의 좌표값 위치를 전달한다.
+
+	// pageX, pageY와는 다름.
+
+	const mouseX = e.clientX;
+
+	const mouseY = e.clientY;
+
+	circle.style.left = mouseX + 'px';
+
+	circle.style.top = mouseY + 'px';
+
+});
+*/
+
+
 /*
 function gotoScroll(e, r) {
-    var zoom = document.body.clientWidth / 1920;
-    // console.log(e)
-    // console.log(document.getElementById(e).offsetTop)
-    $("html, body").animate({
-        scrollTop: document.getElementById(e).offsetTop * zoom
-    }, 1000)
-    console.log(r)
+	var zoom = document.body.clientWidth / 1920;
+	// console.log(e)
+	// console.log(document.getElementById(e).offsetTop)
+	$("html, body").animate({
+		scrollTop: document.getElementById(e).offsetTop * zoom
+	}, 1000)
+	console.log(r)
 }
 */
